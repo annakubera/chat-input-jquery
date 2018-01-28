@@ -1,8 +1,6 @@
 var user = "Ania";
 
 $("input").on("keypress", function(event) {
-  //event.preventDefault();
-  //console.log(event.keyCode);
   if(event.keyCode === 13) {
     var message = event.target.value;
     
