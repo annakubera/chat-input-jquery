@@ -1,0 +1,14 @@
+.messagePanel {
+  width: 100%;
+  height: 200px;
+  background: white;
+  margin-top: 10px;
+}
+
+.user {
+  font-weight: bold;
+}
+
+.date {
+  font-size: 10px;
+}
