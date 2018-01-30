@@ -19,9 +19,9 @@ function renderMessage(message, user) {
   var year = date.getFullYear();
   
   $("#messagePanel").append(
-    "<p class='user'>" + user + "</p>" + 
-    "<p>" + message + "</p>" +
-    "<p class='date'>" + year + "</p>"
+    "<div class='bubble'><p class='user'>" + user + "</p>" + 
+    "<p class='message'>" + message + "</p>" +
+    "<p class='date'>" + year + "</p></div>"
   );
   
 }
