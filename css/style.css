@@ -17,11 +17,30 @@
 }
 
 .bubble {
+  position: relative;
   width: 50%;
   height: 50%;
   background: #DCDCDC;
   margin-top: 10px;
+  margin-left: 10px;
   border-radius: 8px;
+  padding-top: 1px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.bubble:after {
+  content: '';
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  width: 0px;
+  height: 0px;
+  border: 20px solid transparent;
+  border-left-color: #DCDCDC;
+  border-right: 0;
+  border-top: 0;
+  margin-top: 10px;
+  margin-right: 20px;
 }
 
 .message {
