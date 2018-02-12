@@ -10,7 +10,7 @@ version 0.0.1
 1. Na start chata Wyświetlić wszystkie wiadomości z danych dostarczonych w zmiennej "messageData"
 ================================================================================================
 
-a) Na samej górze (pod zmienną "user") utwórz nową zmienną "messageData" i przypisz jej tę tablicę z obiektami - każdy obiekt reprezentuję dane dla pojedynczej wiadomości - w takiej strukturze będziemy przechowywać wiadomości:
+a) Na samej górze (pod zmienną "user") utwórz nową zmienną "messageData" i przypisz jej tę tablicę z obiektami - każdy obiekt reprezentuje dane dla pojedynczej wiadomości - w takiej strukturze będziemy przechowywać wiadomości:
 
 ```
 [{
@@ -33,7 +33,7 @@ b) Array i dostępne metody dla array np. forEach(), filter(), find()
 - utwórz nową funkcję o nazwie: renderMessages(), która będzie przyjmować parametr "messageData":
 - wywołuj tę funkcję od razu na samym początku, czyli w kodzie zaraz po deklaracjach zmiennych
 
-renderMessages(messagePanel);
+renderMessages(messageData);
 
 - w środku funkcji napisz instrukcję, która wywoła napisaną i używaną przez nas już wcześniej funkcję renderMessage(message, user) 4 razy czyli dla każdej wiadomości, którą mamy w tablicy. W ten sposób po wejściu stronę, powinny nam się wyświetlać wszystkie wiadomości z naszej tablicy messageData w messagePanelu...
 
