@@ -6,13 +6,21 @@
   border: groove;
   overflow: hidden;
   overflow-y: scroll;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 10;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
 }
 
 .user {
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
+  font-size: 12px;
 }
 
 .date {
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 10px;
 }
 
@@ -20,7 +28,7 @@
   position: relative;
   width: 50%;
   height: 50%;
-  background: #DCDCDC;
+  background: #f2f2f2;
   margin-top: 10px;
   margin-left: 10px;
   border-radius: 8px;
@@ -36,7 +44,7 @@
   width: 0px;
   height: 0px;
   border: 20px solid transparent;
-  border-left-color: #DCDCDC;
+  border-left-color: #f2f2f2;
   border-right: 0;
   border-top: 0;
   margin-top: 10px;
@@ -44,6 +52,40 @@
 }
 
 .message {
+  font-family: Helvetica, Arial, sans-serif;
   text-wrap: suppress;
   word-wrap: break-word;
+}
+
+.input {
+  font-family: Helvetica, Arial, sans-serif;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    padding: 4px 11px;
+    width: 100%;
+    height: 30px;
+    font-size: 13px;
+    line-height: 1.5;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+      transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: initial;
+    transition-delay: initial;
+}
+
+input:hover {
+   border: 1px solid #1890ff;
+}
+
+input:focus {
+   border: 1,5px solid #1890ff;
 }
