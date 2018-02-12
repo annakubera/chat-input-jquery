@@ -12,6 +12,7 @@ version 0.0.1
 
 a) Na samej górze (pod zmienną "user") utwórz nową zmienną "messageData" i przypisz jej tę tablicę z obiektami - każdy obiekt reprezentuję dane dla pojedynczej wiadomości - w takiej strukturze będziemy przechowywać wiadomości:
 
+```
 [{
 	user: "Pawel",
 	message: "Hello"
@@ -25,7 +26,7 @@ a) Na samej górze (pod zmienną "user") utwórz nową zmienną "messageData" i 
 	user: "Pawel",
 	message: "Nic! Wszystko spoko, jakoś leci... :)"
 }];
-
+```
 
 b) Array i dostępne metody dla array np. forEach(), filter(), find()
 
@@ -37,8 +38,8 @@ renderMessages(messagePanel);
 - w środku funkcji napisz instrukcję, która wywoła napisaną i używaną przez nas już wcześniej funkcję renderMessage(message, user) 4 razy czyli dla każdej wiadomości, którą mamy w tablicy. W ten sposób po wejściu stronę, powinny nam się wyświetlać wszystkie wiadomości z naszej tablicy messageData w messagePanelu...
 
 przykład trywialny, robiący mniej więcej to samo:
--------------------------------------------------
 
+```
 var numbers = [
 {
 	value: 14
@@ -55,7 +56,8 @@ numbers.forEach(function(number) {
 function showValue(value) {
 	console.log(value);
 }
---------------------------------------------------
+```
+
 
 2. Poprawki [code review]
 =========================
@@ -95,9 +97,11 @@ JS
 - dodaj komentarze po angielsku nad każdą deklaracją funkcji co dana funkcja robi np.
 - sprawdź czy masz wszędzie średniki
 
+```
 // Scrolls all messages to the very last on bottom
 function scrollToBottom() {
   var messageWrapperHeight = $("#messageWrapper").height();
   
   $("#messagePanel").scrollTop(messageWrapperHeight);
 }
+```
