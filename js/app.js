@@ -1,16 +1,20 @@
-var user = "Ania";
+var user = window.prompt("Hello! What's your name?");
 var messageData = [{
   user: "Pawel",
-  text: "Hello"
+  text: "Hello",
+  date: "16 Feb 2018"
 }, {
   user: "Ania",
-  text: "Czesc"
+  text: "Czesc",
+  date: "17 Mar 2018"
 }, {
   user: "Ania",
-  text: "Co tam?"
+  text: "Co tam?",
+  date: "18 Apr 2018"
 }, {
   user: "Pawel",
-  text: "Nic! Wszystko spoko, jakoś leci... :)"
+  text: "Nic! Wszystko spoko, jakoś leci... :)",
+  date: "19 May 2018"
 }];
 
 renderMessages(messageData);
@@ -32,14 +36,17 @@ function sendMessage(text) {
 }
 
 // Renders into the messagePanel all the messages written by the user into the input 
-function renderMessage(text, user) {
-  var date = new Date();
-  var year = date.getFullYear();
-  
+function renderMessage(text, user, date) {
+  var time = new Date();
+
+  if (date === undefined) {
+    date = time.getFullYear();
+  }
+      
   $("#messageWrapper").append(
     "<div class='bubble'><p class='user'>" + user + "</p>" + 
     "<p class='text'>" + text + "</p>" +
-    "<p class='date'>" + year + "</p></div>"
+    "<p class='date'>" + date + "</p></div>"
   ); 
 }
 
@@ -52,6 +59,6 @@ function scrollToBottom() {
 // (At the start of the page) Renders all messages from array of var messageData
 function renderMessages() {
   messageData.forEach(function (message) {
-    renderMessage(message.text, message.user);
+    renderMessage(message.text, message.user, message.date);
   });
 }
