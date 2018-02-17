@@ -4,6 +4,56 @@ version 0.0.1
 
 ## Chat
 
+# 17 Feb 2018
+
+1. Ikony i usuwanie wiadomości jako administrator.
+==================================================
+
+- Dodamy, super funkcję dostępną tylko dla admina :) będzie mógł usuwać wiadomości z czatu jak kliknie w przycisk “x” umieszczony w wiadomości
+
+Co potrzebujemy?
+
+a) potrzebujemy wyświetlać button/link z ładną ikonką “X” na początek w każdej wiadomości. W tym celu możemy podpiąć zewnętrzną bibliotekę z ikonkami np. fontAwesome - to jest najpopularniejsza biblioteka z ikonami open source:
+
+https://fontawesome.com/
+
+Dodawanie ikon to jest też całe zagadnienie, można ściągać i trzymać pojedyncze ikony w katalogu assets/ albo img/ albo images/ etc. i stamtąd wpisując bezpośrednio do kodu URLe do nich. Albo tak jak w tym przypadku -  podepniemy sobie poprostu link z neta i będą dostępne zawsze jak będziesz online. Tu jest opisane jak używać fontawesome (interesuje nas sposób z podpięciem przez external link):
+
+https://fontawesome.com/get-started
+
+Przycisk powinien być wystylowany, w ten sposób żeby pojawił się doładnie 16px od górnej i prawej krawędzi message'a.
+
+b) musimy dodać obsługę przycisku: na kliknięcie w "X" - usuń tę wiadomość (usuń tego(this) diva z chmurką i całą zawartością). 
+
+Zrobimy to używając jQuery żeby się nie zajechać zbytnio, dodając event listener on click i funkcję removeMessage() - wszystko analogicznie jak przy wysyłaniu wiadomości! 
+
+Jak złapać cały message który chcemy usunąć korzystając z metody jQuery remove() ?
+Korzystamy znów z jQuery: parent() czyli mamy coś takiego, że startujemy od naszego przycisku:
+
+var button = event.target;
+
+teoretycznie też, zadziała drugi sposób:
+
+var button = $(this) -> bo to jest "TEN" element na którym wykonaliśmy event (kliknęliśmy w niego) i wewnątrz funkcji callback on się podstawia pod keyword "this".
+
+potem, coś w stylu:
+
+button.parent().parent() albo button.parent() (w zależności ile potrzebujemy iść razy do góry etc. i wtedy idziemy po drzewku DOM do góry - wybieramy sobie element, który chcemy i na koniec dodajemy jeszcze metodę: .remove() bo chcemy ten element przecież usunąć z DOM.
+
+c) Na koniec całą tę funkcjonalność ograniczymy tylko do sytuacji, jeżeli user będzie się nazywał "admin" - w tym sensie, że tylko wtedy będziemy wyświetlać X w wiadomości, żeby nie mylić innych userów. Czyli w funkcji renderMessage musimy owarunkować tę część HTML która dodaje naszego X’a coś ala:
+
+// na początku deklarujemy tylko zmienną
+var closeButton = null;
+
+if (user === ‘admin’) {
+	closeButton = // kod wstawiający przycisk X w message '< jakiś html >'
+}
+
+//implementacja buttona w naszym HTML
+
+"<div class='bubble'>" + closeButton + "<p class='user'>" + user... itd.
+
+
 # 15 Feb 2018
 
 1. Implementacja .gitignore
