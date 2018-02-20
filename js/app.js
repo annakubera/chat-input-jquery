@@ -75,7 +75,7 @@ function renderMessages() {
 function removeMessage() {
    var button = event.target;
    $("button").on("click", function() {
-   $("button.parent()").remove();
+   $("button").remove();
      console.log("usuwam wiadomosc");
 });
 }
