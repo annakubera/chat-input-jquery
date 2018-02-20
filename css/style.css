@@ -1,6 +1,6 @@
 .messagePanel {
     width: 100%;
-    height: 200px;
+    height: 600px;
     background: white;
     margin-top: 10px;
     border: groove;
@@ -90,3 +90,21 @@
 .messageInput:focus {
     border: 1,5px solid #1890ff;
 }
+
+.iconXbutton {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+}
+
+.iconXbutton:hover {
+    color: grey;
+}
+
+.iconXbutton:focus {
+    outline: 0;
