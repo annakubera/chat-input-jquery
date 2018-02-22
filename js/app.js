@@ -58,7 +58,7 @@ $("input").on("keypress", function(event) {
 */
 
 $("body").on("click", ".iconXbutton", function(event) {
-    var message = $(event.target).parent().parent().parent();
+    var message = $(event.target).closest('.bubble');
 
     removeMessage(message);
 });
@@ -82,7 +82,7 @@ function renderMessage(text, user, date) {
     date = time.getFullYear();
   }
   // odstęp dla czytelności
-  if(user === "admin") {
+  if (user === "admin") {
     closeButton = "<button type='button' class='iconXbutton''><i class='fas fa-times'></i></button>"// średnik
   }
       
@@ -108,6 +108,6 @@ function renderMessages() {
 }
 
 function removeMessage(message) {
-   message.remove();
+  message.remove();
 }
     
