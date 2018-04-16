@@ -4,6 +4,21 @@ version 0.0.1
 
 ## Chat
 
+# 16 Apr 2018
+
+1. Pozbycie się jQuery
+======================
+
+Na razie możemy uznać, że mamy napisane kilka podstawowych features.
+
+Jednak, programowanie to nie tylko dodawanie nowych funkcji, ale często-gęsto "refactoring" kodu. Dla zrozumienia procesu pierwszym zadaniem, będzie przepisanie naszej aplikacji na czysty JS - tzw. "pure JS". Żebyś nie musiała korzystać z zewnętrznej biblioteki.
+
+Jeżeli nie będziesz wiedziała, jak napisać daną funkcję za pomocą "pure JS", to warto posiłkować się stackoverflow z dopiskiem "in pure JS", np. "How to add on click event without jquery" albo "How to handle on click event in pure js" itd.
+
+Jak już wszystkie funkcje przepiszesz, to usuń z HTML ładowanie biblioteki jQuery. Zasada jest taka, żeby działało identycznie bez jQuery. Ponadto później współnie zbadamy performance wykonywania skryptów, żeby mieć biznesowe uzasadnienie takiego działania.
+
+Jeżeli uda się wykonać to zadanie, będzie wdrażać "wzorce projektowe" czyli będziemy "przepisywać" aplikację wg patternów i koniec końców dojdziemy do czasów dziejszych...
+
 # 17 Feb 2018
 
 1. Ikony i usuwanie wiadomości jako administrator.
