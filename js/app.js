@@ -81,7 +81,7 @@ function renderMessage(text, user, date) {
   if (date === undefined) {
     date = time.getFullYear();
   }
-  
+
   if (user === "admin") {
     closeButton = "<button type='button' class='iconXbutton''><i class='fas fa-times'></i></button>";
   }
